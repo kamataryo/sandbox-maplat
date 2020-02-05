@@ -1,0 +1,71 @@
+{
+  "name": "@maplat/ui",
+  "version": "0.6.8",
+  "description": "Maplat is the cool Historical Map/Illustrated Map Viewer.\nIt can transform each map coordinates with nonlinear but homeomorphic projection and makes possible that the maps can collaborate with GPS/accurate maps, without distorting original maps.",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "files": [
+    "src/",
+    "dist/",
+    "legacy/",
+    "less/",
+    "parts/",
+    "fonts/",
+    "locales/"
+  ],
+  "scripts": {
+    "server": "gulp server",
+    "less_build": "lessc --clean-css less/ui.less dist/maplat.css",
+    "www_build": "webpack",
+    "zip_build": "gulp zip",
+    "sw_build": "gulp sw_build",
+    "build": "npm run less_build && npm run www_build && npm run sw_build && npm run zip_build",
+    "lint": "eslint src/",
+    "preversion": "npm run lint",
+    "version": "npm run build && git add -A"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code4history/Maplat.git"
+  },
+  "keywords": [
+    "warp",
+    "GIS"
+  ],
+  "author": "Kohei Otsuka, Code for History",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/code4history/Maplat/issues"
+  },
+  "homepage": "https://github.com/code4history/Maplat/wiki",
+  "dependencies": {
+    "@maplat/core": "^0.6.5",
+    "@maplat/tin": "^0.6.3",
+    "@turf/turf": "^5.1.6",
+    "ol": "^6.1.1",
+    "ol5": "file:packages/ol5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "core-js": "^3.2.1",
+    "eslint": "^6.3.0",
+    "fs-extra": "^8.1.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-zip": "^4.2.0",
+    "jasmine": "^3.4.0",
+    "less": "^3.10.3",
+    "less-plugin-clean-css": "^1.5.1",
+    "sha1": "^1.1.1",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7",
+    "workbox-build": "^4.3.1"
+  }
+}
