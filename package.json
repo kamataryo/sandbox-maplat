@@ -65,7 +65,7 @@
     "less-plugin-clean-css": "^1.5.1",
     "sha1": "^1.1.1",
     "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.7",
+    "webpack-cli": "^3.3.12",
     "workbox-build": "^4.3.1"
   }
 }
